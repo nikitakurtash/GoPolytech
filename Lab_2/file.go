@@ -1,6 +1,6 @@
 package main
 
-func shellSort(nums []int) {
+func findKthLargest(nums []int, k int) int {
 	n := len(nums)
 	h := 1
 	for h < n/3 {
@@ -15,9 +15,5 @@ func shellSort(nums []int) {
 		}
 		h /= 3
 	}
-}
-
-func findKthLargest(nums []int, k int) int {
-	shellSort(nums)
 	return nums[len(nums)-k]
 }
